@@ -1,13 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Chat } from './ChatApp/chat';
+import { ChatComponent } from './ChatApp/chat';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Chat />
+        <ChatComponent />
       </header>
     </div>
   );

@@ -1,11 +1,13 @@
 import { Component } from "react";
+import { Context } from "./Context";
 interface IChatProps {
+
 }
 interface IChatState {
     
 }
 
-export class Chat extends Component<IChatProps, IChatState, any> {
+export class ChatComponent extends Component<IChatProps, IChatState, any> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -22,7 +24,7 @@ export class Chat extends Component<IChatProps, IChatState, any> {
     render() {
         return (
             <div>
-                HELLO WORLD
+                <Context />
             </div>
         );
     }
