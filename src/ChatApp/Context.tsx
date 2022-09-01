@@ -24,9 +24,11 @@ export class Context extends Component<IContextProps, IContextState, any> {
         return this.state.memberList.map(ele => {
             return (
                 <>
-                    <div className=" text-danger text-start">
+                    <div className=" text-danger text-start list-item">
                         {
-                            ele.name
+                            <b>
+                                {ele.name}
+                            </b>
                         }
                         <button type="button" className="btn btn-outline-danger">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-send-plus" viewBox="0 0 16 16">
@@ -44,8 +46,11 @@ export class Context extends Component<IContextProps, IContextState, any> {
     render() {
         return (
             <>
-                <h1 className="text-warning">HEAD</h1>
-                <div className="cntainer-fluid">
+                <form className="d-flex" role="search">
+                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
+                    <button className="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div className="container-fluid">
                     {
                         this.renderMemberList()
                     }

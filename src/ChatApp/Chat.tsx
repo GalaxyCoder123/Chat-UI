@@ -24,7 +24,7 @@ export class ChatComponent extends Component<IChatProps, IChatState, any> {
     render() {
         return (
             <div>
-                <Context />
+                <Context/>
             </div>
         );
     }
