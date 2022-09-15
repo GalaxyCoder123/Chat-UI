@@ -32,14 +32,14 @@ export class ChatComponent extends Component<IChatProps, IChatState, any> {
             case ChatViewMode.Context :
                return (
                 <Context switcher={
-                    this.veiwSwitcher
+                    (screen: ChatViewMode, name="") => this.veiwSwitcher(screen, name)
                   }/>
                );
                break;
             case ChatViewMode.Messenger :
                 return (
                  <Messenger name={this.state.name} switcher={
-                    this.veiwSwitcher
+                    (screen: ChatViewMode, name="") => this.veiwSwitcher(screen, name)
                  }/>
                 );
                 break;
