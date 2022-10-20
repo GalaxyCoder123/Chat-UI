@@ -59,10 +59,6 @@ export class ChatComponent extends Component<IChatProps, IChatState, any> {
                 {
                     this.veiwSelector()
                 }
-                <button>Test</button>
-                <button onClick={() => {
-                  this.veiwSwitcher(ChatViewMode.Context);
-                }}>Test2</button>
             </div>
         );
     }
