@@ -28,9 +28,15 @@ export class Messenger extends Component<IMessengerProps, IMessengerState, any> 
     };
 
     async sendMessage() {
+        const params = new URLSearchParams();
+        params.append('user', 'hello');
+        params.append('userWhoRecieves', 'hey');
+
+        const response = await fetch('http://localhost:8080/message/?' + params,
+            { method: 'GET' });
+        const data = await response.json();
         let messageArray = [...this.state.messageList, this.state.newMessage];
         this.setState({ messageList: messageArray })
-  
     };
 
     setNewMessage(message: any) {
